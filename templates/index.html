@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc.Dano</title>
+    <link rel="stylesheet" href="../static/style.css"/>
+</head>
+<body>
+    <div class="form_wrapper">
+        <div class="t55">
+            Seu tanque: T-55A
+            <img src="../static/images/ussr_t_55a.png" width="450"alt="T-55">
+            <audio controls>
+                <source src="../static/audio/Red Alert 3 Theme  Soviet March.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="vazio"></div>
+        <div class="selecionar">
+            <h1 class="texto">Calculadora de dano!</h1>
+            <div class="texto">
+                Escolha o alvo:
+            </div>
+            <div class="elementos">
+            {%for tanque in tanques%}
+                <div class="cardTanque">
+                    <input type="image" name="escolha" src="{{tanque.imagem}}" width="300" height="200" id="{{tanque.tipo}}" alt="{{tanque.tipo}}" value="{{tanque.tipo}}Retorno" />
+                </div>
+            {%endfor%}
+            </div>
+            <div class="texto">
+            {%for tanque in tanques%}
+                <label for="{{tanque.tipo}}">{{tanque.tipo}}</label>
+            {%endfor%}
+            </div>
+            <div class="texto">
+                Escolha a munição: 
+            </div>
+            <div class="elementos">
+            {%for municao in municoes%}
+                <div class="cardMunicoes">
+                    <input type="image" name="municao" src="{{municao.imagem}}" width="70" id="{{municao.tipo}}" value="{{municao.tipo}}Retorno" />
+                </div>
+            {%endfor%}
+            </div>
+            <div class="texto">
+            {%for municao in municoes%}
+                <label for="{{municao.tipo}}">{{municao.tipo}}&nbsp;&nbsp;</label>
+            {%endfor%}
+            </div>
+            <div class="texto">
+                <button type="button" id="calcularDano">Calcule o dano!</button>
+            </div>
+            <div class="texto">
+                <div id="resultado"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/index.js"></script>
+</body>
+</html>
