@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://i.gifer.com/fzmZ.gif);
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/861739932495348105/F7515AAE5D415D2B751C164FA719AD91910CABED/);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -72,6 +72,7 @@ body {
     width: fit-content;
     height: fit-content;
     font-family: Haettenschweiler, 'Arial Narrow Bold';
+    cursor: pointer;
 }
 
 .cardTanque {

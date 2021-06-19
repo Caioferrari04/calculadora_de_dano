@@ -24,8 +24,8 @@
             </div>
             <div class="elementos">
             {%for tanque in tanques%}
-                <div class="cardTanque">
-                    <input type="image" name="escolha" src="{{tanque.imagem}}" width="300" height="200" id="{{tanque.tipo}}" alt="{{tanque.tipo}}" value="{{tanque.tipo}}Retorno" />
+                <div class="cardTanque" value="{{tanque.vida}}" id="{{tanque.tipo}}">
+                    <input type="image" name="escolha" src="{{tanque.imagem}}" width="300" height="200" alt="{{tanque.tipo}}" value="{{tanque.vida}}" />
                 </div>
             {%endfor%}
             </div>
@@ -39,8 +39,8 @@
             </div>
             <div class="elementos">
             {%for municao in municoes%}
-                <div class="cardMunicoes">
-                    <input type="image" name="municao" src="{{municao.imagem}}" width="70" id="{{municao.tipo}}" value="{{municao.tipo}}Retorno" />
+                <div class="cardMunicoes" value="{{municao.dano}}">
+                    <input type="image" name="municao" src="{{municao.imagem}}" width="70" id="{{municao.tipo}}"/>
                 </div>
             {%endfor%}
             </div>
@@ -50,10 +50,10 @@
             {%endfor%}
             </div>
             <div class="texto">
-                <button type="button" id="calcularDano">Calcule o dano!</button>
+                <button type="button" id="calcularDano" onclick="dano()">Calcule o dano!</button>
             </div>
             <div class="texto">
-                <div id="resultado"></div>
+                <span id="resultado"></span>
             </div>
         </div>
     </div>

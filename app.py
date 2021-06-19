@@ -25,17 +25,17 @@ def home():
         {
             'tipo': 'APHEBC',
             'imagem': 'static/images/ShellAPHE.png',
-            'dano': randint(0,20)
+            'dano': 35
         },
         {
             'tipo': 'HE',
             'imagem': 'static/images/ShellHE.png',
-            'dano': randint(0,20)
+            'dano': 15
         },
         {
             'tipo': 'APFSDS',
             'imagem': 'static/images/ShellAPFSDS.png',
-            'dano': randint(0,20)
+            'dano': 55
         }
     ]
     return render_template(
