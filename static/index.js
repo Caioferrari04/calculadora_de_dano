@@ -73,3 +73,11 @@ function sorte() {
 
     return Math.floor(Math.random() * (max + 1));
 }
+
+
+if(screen.width>=1000) {
+    document.write("<style>body{zoom:63.5%;}</style>");}
+if(screen.width>=1600) {
+    document.write("<style>body{zoom:97.5%;}</style>");}
+if(screen.width>=2500) {
+    document.write("<style>body{zoom:150%;}</style>");}
